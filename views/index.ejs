@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, I am <%= output.rows[0].name %></h1>
+    <p>I am <%= output.rows[0].age%> years old.</p>
+
+    <p>and here's are my friends name:- </p>
+    <% output.rows.forEach(function(row){ %>
+      <%  if(row.name !== 'krish'){ %>
+          <p>Name: <strong><%=row.name%></strong>, Age: <%=row.age%></p>
+   <% } %>
+   <% }) %>
+</body>
+</html>
